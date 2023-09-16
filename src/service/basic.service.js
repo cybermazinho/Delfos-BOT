@@ -72,10 +72,10 @@ const webhook = async (res) =>{
 
         if(clientLuis.length !== 0){
             const idLuis = clientLuis.asaas
-            _var.payment(idLuis, fixNumber, _var.urlClientAsaasLuis, _var.tokenLuis, 5, res.listResponseMessage.message)
+            _var.payment(idLuis, fixNumber, _var.urlPaymentAsaasLuis, _var.tokenLuis, 5, res.listResponseMessage.message)
         }else{
             const idMarco = clientMarco.asaas
-            _var.payment(idMarco, fixNumber, _var.urlClientAsaasMarco, _var.tokenMarco, 5, res.listResponseMessage.message)
+            _var.payment(idMarco, fixNumber, _var.urlPaymentAsaasMarco, _var.tokenMarco, 5, res.listResponseMessage.message)
         }
     }
 }
