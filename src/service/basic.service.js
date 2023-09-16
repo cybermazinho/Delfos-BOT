@@ -4,6 +4,7 @@ import LuisDB from "../models/luis.models.js";
 import MarcoDB from "../models/marco.models.js";
 
 const paymentWait = (nome, sobrenome, cpf, email, telefone, descricao, medico) => {
+    console.log(nome, sobrenome, cpf, email, telefone, descricao, medico)
     
     if(medico === "Dr. Luis"){
 
