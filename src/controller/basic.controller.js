@@ -2,10 +2,10 @@ import basicService from "../service/basic.service.js"
 
 const formCreate = async (req, res) => {
 
-    const {name, sobrenome, CPF,  Email, Phone, descricao, medico} = req.body
+    const {name, sobrenome, CPF,  Email, phone, descricao, medico} = req.body
     
     try{
-        basicService.paymentWait(name, sobrenome, CPF, Email, Phone, descricao, medico)
+        basicService.paymentWait(name, sobrenome, CPF, Email, phone, descricao, medico)
         res.status(201).json("✔️").end()
     }catch{
         res.status(400).json("❌").end()
