@@ -11,7 +11,7 @@ const paymentWait = (nome, sobrenome, cpf, email, telefone, descricao, medico) =
             "phone": telefone,
             "message": `Olá ${nome}, como vai? Ficamos muito felizes com o seu cadastro no formulário da Clínica Delfos! Agora, para prosseguirmos com o agendamento, vamos dar os toques finais no pagamento. 😊👍`
         }).then( () =>{
-            buttonMessage(telefone)
+            _var.buttonMessage(telefone)
         })
     
         axios.post(_var.urlClientAsaasLuis, 
@@ -36,7 +36,7 @@ const paymentWait = (nome, sobrenome, cpf, email, telefone, descricao, medico) =
             "phone": telefone,
             "message": `Olá ${nome}, como vai? Ficamos muito felizes com o seu cadastro no formulário da Clínica Delfos! Agora, para prosseguirmos com o agendamento, vamos dar os toques finais no pagamento. 😊👍`
         }).then( () =>{
-            buttonMessage(telefone)
+            _var.buttonMessage(telefone)
         })
     
         axios.post(_var.urlClientAsaasMarco, 
