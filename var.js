@@ -95,6 +95,31 @@ const payment = (id, number, link, token, valor, type) =>{
   }
 }
 
+const buttonMessage = (telefone) => {
+  axios.post(urlSendButton, 
+    {
+        "phone": telefone,
+        "message": "Escolha sua forma de pagamento:",
+        "optionList": {
+          "title": "Opções disponíveis",
+          "buttonLabel": "Clique Aqui!",
+          "options": [
+            {
+              "id": "1",
+              "description": "Pix",
+              "title": "Pague com QRcode"
+            },
+            {
+              "id": "2",
+              "description": "Parcele sua compra!",
+              "title": "Cartão de Crédito"
+            }
+          ]
+        }
+    }    
+  )
+}
+
 export default {
     urlSendMessage,
     urlSendButton,
@@ -108,5 +133,6 @@ export default {
     urlPaymentAsaasLuis,
     urlPaymentAsaasMarco,
     sendMessageMedic,
-    payment
+    payment,
+    buttonMessage
 }

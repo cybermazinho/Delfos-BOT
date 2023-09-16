@@ -10,6 +10,8 @@ const paymentWait = (nome, sobrenome, cpf, email, telefone, descricao, medico) =
         axios.post(_var.urlSendMessage, {
             "phone": telefone,
             "message": `Olá ${nome}, como vai? Ficamos muito felizes com o seu cadastro no formulário da Clínica Delfos! Agora, para prosseguirmos com o agendamento, vamos dar os toques finais no pagamento. 😊👍`
+        }).then( () =>{
+            buttonMessage(telefone)
         })
     
         axios.post(_var.urlClientAsaasLuis, 
@@ -33,6 +35,8 @@ const paymentWait = (nome, sobrenome, cpf, email, telefone, descricao, medico) =
         axios.post(_var.urlSendMessage, {
             "phone": telefone,
             "message": `Olá ${nome}, como vai? Ficamos muito felizes com o seu cadastro no formulário da Clínica Delfos! Agora, para prosseguirmos com o agendamento, vamos dar os toques finais no pagamento. 😊👍`
+        }).then( () =>{
+            buttonMessage(telefone)
         })
     
         axios.post(_var.urlClientAsaasMarco, 
@@ -53,31 +57,6 @@ const paymentWait = (nome, sobrenome, cpf, email, telefone, descricao, medico) =
 
     }
 
-    setTimeout(()=>{
-        axios.post(_var.urlSendButton, 
-            {
-                "phone": telefone,
-                "message": "Escolha sua forma de pagamento:",
-                "optionList": {
-                  "title": "Opções disponíveis",
-                  "buttonLabel": "Clique Aqui!",
-                  "options": [
-                    {
-                      "id": "1",
-                      "description": "Pix",
-                      "title": "Pague com QRcode"
-                    },
-                    {
-                      "id": "2",
-                      "description": "Parcele sua compra!",
-                      "title": "Cartão de Crédito"
-                    }
-                  ]
-                }
-            }    
-        )
-    }, 5000)
-   
 }
 
 const webhook = async (res) =>{
