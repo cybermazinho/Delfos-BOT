@@ -25,8 +25,8 @@ const urlPaymentAsaasLuis = "https://sandbox.asaas.com/api/v3/payments"
 const urlPaymentAsaasMarco = "https://sandbox.asaas.com/api/v3/payments"
 
 //Numero dos medicos
-const numeroLuis = "68999759374" 
-const numeromarco = "68999759374"
+const numeroLuis = "" 
+const numeromarco = ""
 
 //Funcionalidade que obriga a mensagem do zap zap a ser ordenada para os medicos
 const sendMessageMedic = async (message, medico) => {
